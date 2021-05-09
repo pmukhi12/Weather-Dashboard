@@ -1,23 +1,49 @@
+<!-- HTML Basics -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>Weather Dashboard</title>
+     <!-- Link in Bootstrap and StyleSheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css"></link>
 </head>
 <body>
-    <header>
-        Weather Dashboard
+    <!-- Header -->
+    <header class="container-fluid">
+        <h1>Weather Dashboard</h1>
     </header>
+    <!-- main -->
     <main>
-        <div>
-            Search for City
-        </div>
-        <input id="city-input">
-        <button id="search"></button>
-        <div id="weather-display"></div>
+        <!-- main container  -->
+        <div class="container"></div>
+            <!-- city search-->
+            <div class="column center justify-content-end align-items-center"></div>    
+                <div class="col-04 offset-2">
+                    <div>
+                        Search for City
+                    </div>
+                    <input id="city-input">
+                    <button id="search"></button>
+                    <div id="weather-display"></div>
+                </div>
+                <!-- Weather display  -->
+                <div class="column center justify-content align-items-center">
+                    <div class="col-08" id="weather-display">
+                        <div id="day-01">Day 1</div>
+                        <div id="day-02"> Day 2</div>
+                        <div id="day-03"> Day 3</div>
+                        <div id="day-04"> Day 4</div>
+                        <div id="day-05">Day 5</div>
+                    </div>
+                </div>
+    </main>
+    <!-- javascript Files  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
+
