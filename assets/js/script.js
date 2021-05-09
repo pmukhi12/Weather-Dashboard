@@ -47,7 +47,7 @@ function getGeoLocation(searchResult) {
     // Api Key Variable
     var apiKey = "30148a43276dc2554a57267ec878f1f9";
     // cityUrl - initial API to get the longitude and latitude of the city
-    var cityUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + searchResult + "&appid="+ apiKey;
+    var cityUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + searchResult + "&appid="+ apiKey;
     //fetch the promise from the city API
     fetch(cityUrl)
     //  then return the response in json format
