@@ -84,17 +84,19 @@ function getWeatherByLoc(lat,lon) {
         console.log(data);
         var temperature = data.current.temp;
         var humidity = data.current.humidity;
+        var windspeed = data.current.wind_speed;
+        var uvIndex = data.current.uvi;
         var day02temp = data.daily[1].temp.day;
         var day03temp = data.daily[2].temp.day;
         var day04temp = data.daily[3].temp.day;
         var day05temp = data.daily[4].temp.day;
         // assign the temperatures to the elements 
-        humidityEl.textContent = "The humidity is currently: " + humidity;
-        day01El.textContent = moment().format('ddd MMM Do, YYYY') + ": The weather is currently " + temperature + " degrees Farenheit!"
-        day02El.textContent = moment().add(1,'days').format('ddd MMM Do, YYYY') + ": The weather will be " + day02temp + " degrees Farenheit!"
-        day03El.textContent = moment().add(2,'days').format('ddd MMM Do, YYYY') + ": The weather will be " + day03temp + " degrees Farenheit!"
-        day04El.textContent = moment().add(3,'days').format('ddd MMM Do, YYYY') + ": The weather will be " + day04temp + " degrees Farenheit!"
-        day05El.textContent = moment().add(4,'days').format('ddd MMM Do, YYYY') + ": The weather will be " + day05temp + " degrees Farenheit!"
+        humidityEl.textContent = "The humidity is currently: " + humidity + ". The wind speed is currently " + windspeed + " mph!" + "The UV Index is " + uvIndex;
+        day01El.textContent = moment().format('ddd MMM Do, YYYY') + ": The weather is currently " + temperature + " degrees Farenheit!";
+        day02El.textContent = moment().add(1,'days').format('ddd MMM Do, YYYY') + ": The weather will be " + day02temp + " degrees Farenheit!";
+        day03El.textContent = moment().add(2,'days').format('ddd MMM Do, YYYY') + ": The weather will be " + day03temp + " degrees Farenheit!";
+        day04El.textContent = moment().add(3,'days').format('ddd MMM Do, YYYY') + ": The weather will be " + day04temp + " degrees Farenheit!";
+        day05El.textContent = moment().add(4,'days').format('ddd MMM Do, YYYY') + ": The weather will be " + day05temp + " degrees Farenheit!";
     })
 }
 
