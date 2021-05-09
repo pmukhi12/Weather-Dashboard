@@ -33,8 +33,10 @@ function getSearchVal () {
     console.log({searchValue});
     if (searchValue) {
         getGeoLocation(searchValue);
+        document.getElementById('city-name').textContent = searchValue;
         document.getElementById('city-input').value = '';
     }
+
     
 }
 
