@@ -20,27 +20,33 @@
         <!-- main container  -->
         <div class="container"></div>
             <!-- city search-->
-            <div class="form-container"></div>    
-                <form>
+            <div class="column center justify-content-end align-items-center"></div>    
+                <div class="col-04 offset-2">
                     <div>
                         Search for City
                     </div>
                     <input id="city-input">
-                    <button id="search"> 😎</button>
+                    <button id="search"></button>
                     <div id="weather-display"></div>
-                </form>
-                <!-- Weather display  -->
+                </div>
+                <!-- weather display  -->
+                <div id="current-weather"> </div>
+                <!-- humidity display  -->
+                <div id="humidity"></div>
+                <!-- forecast display  -->
+                <div></div>
                 <div class="column center justify-content align-items-center">
                     <div class="col-08" id="weather-display">
-                        <div id="day-01">Day 1</div>
-                        <div id="day-02"> Day 2</div>
-                        <div id="day-03"> Day 3</div>
-                        <div id="day-04"> Day 4</div>
-                        <div id="day-05">Day 5</div>
+                        <div id="day-01"></div>
+                        <div id="day-02"></div>
+                        <div id="day-03"></div>
+                        <div id="day-04"></div>
+                        <div id="day-05"></div>
                     </div>
                 </div>
     </main>
-    <!-- javascript Files  -->
+    <!-- JavaScript Files  -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="./assets/js/script.js"></script>
