@@ -56,10 +56,12 @@ function getGeoLocation(searchResult) {
     //take the data and return the longitute and latitude
     .then(function (data) {
         console.log(data);
-        //store the search in the cities stored array
-        citiesStored.push(searchResult);
-        // setItem of cities and stringify cities stored 
-        localStorage.setItem('cities',JSON.stringify(citiesStored));
+        if (citiesStored.indexOf(searchResult) === -1) {
+            //store the search in the cities stored array
+            citiesStored.push(searchResult);
+            // setItem of cities and stringify cities stored 
+            localStorage.setItem('cities',JSON.stringify(citiesStored));
+        }
         // return the latitude and longitude
         var lat = data[0].lat;
         var lon = data[0].lon;
