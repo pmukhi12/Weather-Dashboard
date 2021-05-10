@@ -40,7 +40,6 @@ function getSearchVal () {
     
 }
 
-
 // Fetch the location URL, Return the Object in Json Format
 
 function getGeoLocation(searchResult) {
